@@ -6,7 +6,7 @@ import android.content.Context;
 import com.pragma.data.exception.ConnectionException;
 import com.pragma.presentation.R;
 
-i
+
 
 /**
  * Factory used to create error messages from an Exception as a condition.
