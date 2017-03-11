@@ -1,4 +1,4 @@
-package com.pragma.domain.repository.datasource;
+package com.pragma.data.net;
 
 /**
  * Created by anbu.ezhilan on 9/03/2017.

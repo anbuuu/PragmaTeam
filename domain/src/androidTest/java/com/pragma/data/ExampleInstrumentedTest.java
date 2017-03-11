@@ -1,4 +1,4 @@
-package com.pragma.domain;
+package com.pragma.data;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.pragma.data", appContext.getPackageName());
+        assertEquals("com.pragma.domain", appContext.getPackageName());
     }
 }

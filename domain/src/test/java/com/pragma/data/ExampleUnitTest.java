@@ -1,4 +1,4 @@
-package com.pragma.domain;
+package com.pragma.data;
 
 import org.junit.Test;
 
