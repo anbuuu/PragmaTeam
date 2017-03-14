@@ -19,6 +19,7 @@ import android.content.Context;
 
 import com.pragma.domain.executor.PostExecutionThread;
 import com.pragma.domain.executor.ThreadExecutor;
+import com.pragma.domain.repository.RestaurantResultRepository;
 import com.pragma.presentation.internal.di.modules.ApplicationModule;
 import com.pragma.presentation.view.activity.BaseActivity;
 
@@ -39,4 +40,6 @@ public interface ApplicationComponent {
   ThreadExecutor threadExecutor();
   PostExecutionThread postExecutionThread();
   //TODO update this repository UserRepository userRepository();
+  RestaurantResultRepository restaurantResultsRepository();
+
 }

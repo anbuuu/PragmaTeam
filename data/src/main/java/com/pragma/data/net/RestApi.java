@@ -1,6 +1,7 @@
 package com.pragma.data.net;
 
 import com.pragma.data.entity.RestaurantEntity;
+import com.pragma.data.entity.Result;
 
 import java.util.List;
 
@@ -18,7 +19,12 @@ public interface RestApi {
     /**
      * Retrieves an {@link Observable} which will emit a List of {@link RestaurantEntity}.
      */
-    Observable<List<RestaurantEntity>> restaurantEntityList();
+    Observable<List<Result>> restaurantEntityList();
 
+    /**
+     * Retrieves a Single Restaurant Details
+     * @param restaurantId The Restaurant Id to get the Data
+     */
+    Observable<Result> restaurantEntityById(final String restaurantId);
 
 }

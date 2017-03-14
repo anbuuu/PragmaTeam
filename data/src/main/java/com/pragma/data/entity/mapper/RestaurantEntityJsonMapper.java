@@ -3,6 +3,7 @@ package com.pragma.data.entity.mapper;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.pragma.data.entity.RestaurantEntity;
+import com.pragma.data.entity.Result;
 
 import org.json.JSONException;
 
@@ -31,7 +32,7 @@ public class RestaurantEntityJsonMapper {
      * @throws com.google.gson.JsonSyntaxException if the json string
      * is not a valid json structure
      */
-    public List<RestaurantEntity> transformRestaurantEntityCollection(String restaurantListJsonResponse)
+    public List<Result> transformRestaurantEntityCollection(String restaurantListJsonResponse)
             throws JSONException {
         final Type listofRestaurantEntityType = new TypeToken<List<RestaurantEntity>>() { }.getType();
         return this.gson.fromJson(restaurantListJsonResponse, listofRestaurantEntityType);

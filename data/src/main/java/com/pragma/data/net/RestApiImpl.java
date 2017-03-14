@@ -4,7 +4,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.pragma.data.entity.RestaurantEntity;
+import com.pragma.data.entity.Result;
 import com.pragma.data.entity.mapper.RestaurantEntityJsonMapper;
 import com.pragma.data.exception.ConnectionException;
 
@@ -55,11 +55,11 @@ public class RestApiImpl implements RestApi {
     }
 
     @Override
-    public Observable<List<RestaurantEntity>> restaurantEntityList() {
+    public Observable<List<Result>> restaurantEntityList() {
 
-        return Observable.create(new ObservableOnSubscribe<List<RestaurantEntity>>() {
+        return Observable.create(new ObservableOnSubscribe<List<Result>>() {
             @Override
-            public void subscribe(ObservableEmitter<List<RestaurantEntity>> emitter) throws Exception {
+            public void subscribe(ObservableEmitter<List<Result>> emitter) throws Exception {
                 if ( RestApiImpl.this.isThereInternetConnection()) {
                     try {
                         String responseRestaurantEntities = RestApiImpl.this.getRestaurantEntitiesFromApi();
@@ -77,6 +77,11 @@ public class RestApiImpl implements RestApi {
              }
            });
         }
+
+    @Override
+    public Observable<Result> restaurantEntityById(String restaurantId) {
+        return null;
+    }
 
     private String getRestaurantEntitiesFromApi() throws MalformedURLException {
         return ApiConnection.createGET(API_GET_RESTAURANTS_LIST_URL).requestSyncCall();
