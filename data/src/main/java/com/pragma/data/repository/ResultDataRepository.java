@@ -1,6 +1,7 @@
-package com.pragma.data.repository.datasource;
+package com.pragma.data.repository;
 
 import com.pragma.data.entity.mapper.RestaurantEntityDataMapper;
+import com.pragma.data.repository.datasource.ResultsDataStoreFactory;
 import com.pragma.domain.RestaurantResults;
 import com.pragma.domain.repository.RestaurantResultRepository;
 

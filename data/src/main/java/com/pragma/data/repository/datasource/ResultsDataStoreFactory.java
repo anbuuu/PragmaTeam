@@ -12,11 +12,11 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 /**
- * Factory that creates different implementations of {@link  RepositoryDataStore }
+ * Factory that creates different implementations of {@link  ResultDataStore }
  */
 
 @Singleton
-class ResultsDataStoreFactory {
+public class ResultsDataStoreFactory {
 
     private final Context context;
     private final ResultsCache resultsCache;

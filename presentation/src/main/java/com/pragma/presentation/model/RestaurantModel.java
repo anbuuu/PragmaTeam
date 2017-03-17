@@ -1,18 +1,17 @@
-package com.pragma.domain;
+package com.pragma.presentation.model;
 
 /**
- * Created by anbu.ezhilan on 12/03/2017.
+ * Class represents a user in the presentation Layer
  */
 
-public class RestaurantResults {
+public class RestaurantModel {
 
     private final String id;
 
-    public RestaurantResults(String id) {
+    public RestaurantModel(String id) {
         this.id = id;
     }
 
-    public String getId() { return id; }
     // restaurant Name, Distance, Rating, Opening hours, image URL, Link
 
     private String name;
