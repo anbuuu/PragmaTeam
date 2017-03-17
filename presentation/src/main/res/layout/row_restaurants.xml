@@ -20,7 +20,7 @@
         />
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/rowTitle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="@dimen/lv_row_text_size"
