@@ -4,8 +4,6 @@ package com.pragma.presentation;
 import android.app.Application;
 
 import com.pragma.presentation.internal.di.components.ApplicationComponent;
-import com.pragma.presentation.internal.di.components.DaggerApplicationComponent;
-import com.pragma.presentation.internal.di.modules.ApplicationModule;
 import com.squareup.leakcanary.LeakCanary;
 
 /**
@@ -23,9 +21,9 @@ public class AndroidApplication extends Application {
   }
 
   private void initializeInjector() {
-    this.applicationComponent = DaggerApplicationComponent.builder()
+    /*this.applicationComponent = DaggerApplicationComponent.builder()
         .applicationModule(new ApplicationModule(this))
-        .build();
+        .build();*/
   }
 
   public ApplicationComponent getApplicationComponent() {

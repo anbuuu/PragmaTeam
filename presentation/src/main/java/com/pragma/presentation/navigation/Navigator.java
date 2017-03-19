@@ -15,6 +15,12 @@
  */
 package com.pragma.presentation.navigation;
 
+import android.content.Context;
+import android.content.Intent;
+
+import com.pragma.presentation.view.activity.RestaurantDetailsActivity;
+import com.pragma.presentation.view.activity.RestaurantListActivity;
+
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
@@ -30,6 +36,26 @@ public class Navigator {
     }
     // TODO add Restaurant Details here
 
+
+    /**
+     * Goes to Restaurant List Screen
+     */
+    public void navigateToRestaurantList(Context context) {
+        if ( context != null ) {
+            Intent intentToLaunch = RestaurantListActivity.getCallingIntent(context);
+            context.startActivity(intentToLaunch);
+        }
+    }
+
+    /**
+     * Navigate to Restaurant Details
+     */
+    public void navigateToRestaurantDetails(Context context, String restaurantId) {
+        if ( context != null ) {
+            Intent intentToLaunch = RestaurantDetailsActivity.getCallingIntent(context, restaurantId);
+            context.startActivity(intentToLaunch);
+        }
+    }
 
     /**
      * Goes to the user list screen.

@@ -39,6 +39,7 @@ public class RestaurantModelDataWrapper {
         restaurantModel.setOpeningHours(restaurantResults.getOpeningHours());
         restaurantModel.setRating(restaurantResults.getRating());
 
+
         return restaurantModel;
 
     }

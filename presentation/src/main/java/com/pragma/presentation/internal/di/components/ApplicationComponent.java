@@ -39,7 +39,6 @@ public interface ApplicationComponent {
   Context context();
   ThreadExecutor threadExecutor();
   PostExecutionThread postExecutionThread();
-  //TODO update this repository UserRepository userRepository();
   RestaurantResultRepository restaurantResultsRepository();
 
 }
